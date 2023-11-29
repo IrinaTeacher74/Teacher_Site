@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+        <form action="http://sites/reg.php" method="POST">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirm_password">Подтвердите пароль:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+        
+            <label for="registration_type">Тип регистрации:</label>
+            <input type="radio" id="individual" name="registration_type" value="individual" checked>
+            <label for="individual">Обычный пользователь</label>
+        
+            <input type="radio" id="teacher" name="registration_type" value="teacher">
+            <label for="teacher">Учитель</label>
+
+            <input type="radio" id="administrator" name="registration_type" value="administrator">
+            <label for="administrator">Администратор</label>
+            
+            <input type="submit" value="Зарегистрироваться">
+        </form>
+    
+    
+    <style>
+        form {
+        width: 300px; /* Ширина формы */
+        margin: 0 auto; /* Центрирование по горизонтали */
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    
+    .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    </style>
+</body>
+</html>

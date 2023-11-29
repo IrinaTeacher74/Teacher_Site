@@ -1,0 +1,17 @@
+<button onclick="downloadFile()">Скачать файл</button>
+
+<script>
+    function downloadFile() {
+    // Создаем ссылку для загрузки файла
+    var link = document.createElement('a');
+    link.href = '/path/to/file'; // Замените "/path/to/file" на фактический путь к вашему файлу
+    
+    // Задаем имя файла для загрузки
+    link.download = 'filename.ext'; // Замените "filename.ext" на имя файла с расширением
+    
+    // Добавляем ссылку в документ и эмулируем клик по ней
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    }
+</script>
